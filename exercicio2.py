@@ -17,6 +17,10 @@ fruits = ["banana", "jabuticaba", "pitanga", "mirtilo", "morango", "abacaxi", "c
 
 pick_fruit = random.choice(fruits)
 # print(pick_fruit)
+resposta = [pick_fruit]
+# print(resposta)
+
+letras = []
 
 print("""
         JOGO
@@ -27,38 +31,37 @@ print("""
 
 jogador = input("Qual o seu nome? ")
 
-resposta = [pick_fruit]
-# print(resposta)
 
-tentativa = input("Escolha uma letra: ").lower()
-# print(tentativa in resposta)
-
-letras = []
-
-while tentativa in resposta:
+def tentar():
     tentativa = input("Escolha uma letra: ").lower()
+    # print(tentativa in resposta)
+    # print(tentativa)
+    # print(resposta)
+    if tentativa in resposta[0]:
+        n = resposta[0].count(tentativa)
+        for i in range(n):
+            letras.append(tentativa)
+    testar(tentativa)
+
+
+def testar(tentativa):
     if len(tentativa) > 1:
         print("Digite apenas uma letra: ").lower()
     elif tentativa == int:
-        print("Digite uma letra: ").lower()
-    else:
+        print("Digite uma letra: ")
+    elif tentativa in letras:
+        print("Uhul! essa letra tem na resposta!")
+        # print(letras)
+    elif tentativa not in resposta[0]:
         print("Ih! Não tem essa letra na resposta!")
 
-    tentativa += letras
 
-if let
-    ras == resposta:
-    print(f"Acertô {jogador}, a resposta era {resposta}")
+def verificar():
+    if len(letras) == len(resposta[0]):
+        print(f"{jogador} achou a fruta escondida, era {resposta[0]}!")
+        return True
 
-# try:
-#     código a tentar
-# except AlgumaExcecao:
-#     código a executar no caso da exceção
-# else:
-#     código a executar caso não ocorra exceção em try
-# finally:
-#     código que é executado sempre, independente de haver uma exceção em andamento ou não
-
-
-
-
+while True:
+    tentar()
+    if verificar():
+        break

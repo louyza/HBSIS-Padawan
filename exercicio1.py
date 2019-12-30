@@ -54,4 +54,3 @@ if hand > 21:
     print("O resultado deu", hand, ", você PERDEU!!!")
 else:
     print("Ganhou o joguinho malandragem!!!")
-
