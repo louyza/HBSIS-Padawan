@@ -22,3 +22,32 @@
 #
 # ^ Note: An array/list of all "known" animals
 # is preloaded in a variable called ANIMALS (refer to the initial solution)
+
+
+# class PhotoScan:
+#
+#     def __init__(self):
+#         pass
+#
+#     def scan_files(self):
+
+import re
+
+files = input("Choose files to scan: ")
+
+photo = "".join(files.split("=")) + " "
+
+scan = []
+
+for i in range(len(photo)-1):
+    if not photo[i] == photo[i+1] and re.findall("[a-z]", photo[i]):
+        scan.append(photo[i])
+        if i * 2 in scan:
+            scan.remove(photo[i])
+
+
+
+print(scan)
+
+
+
