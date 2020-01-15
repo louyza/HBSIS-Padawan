@@ -89,9 +89,11 @@ for i in photo:
 # print(scan)
 
 # ----- searching each scan item with each animal list list item -----
-
-
-
+while A LISTA DE ANIMAIS NÃO TIVER UMA LISTA COM OS MESMOS CARACTERES DA LISTA SCAN:
+    for i in scan: PEGA O ITEM DE SCAN E COMPARA COM A PRIMEIRA LISTA DA DOS ANIMAIS
+                    SE TIVER, PASSA PARA O PRÓXIMO E ASSIM POR DIANTE
+        for item in animals[i]: A LISTA DOS ANIMAIS QUE TIVER  MAIS ITENS IGUAIS AO DA SCAN
+            if i == item:       PARA ISSO TENHO QUE FAZER UMA FUNÇÃO QUE CRIE VARIÁVEIS COM OS "PONTOS" DE CADA LISTA
 
 
 
@@ -128,7 +130,3 @@ for i in photo:
 
 
 
-# while check[i] != scan[i]:
-#     for i in scan:
-#         for item in animals[i]:
-#             if i == item:
