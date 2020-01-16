@@ -23,6 +23,7 @@
 # ^ Note: An array/list of all "known" animals
 # is preloaded in a variable called ANIMALS (refer to the initial solution)
 
+import re
 
 # class PhotoScan:
 #
@@ -80,8 +81,33 @@ for i in range(len(photo) - 1):
     if not photo[i] == photo[i + 1]:
         scan.append(photo[i])
 
-# ----- checking if theres the same animal on the two lists -----
+# ----- tidying up names with repeated letters -----
+repeated_animals = [["a", "r", "d", "v", "a", "r", "k"], ["a", "l", "i", "g", "a", "t", "o", "r"],
+                    ["a", "r", "m", "a", "d", "i", "l", "o"], ["b", "a", "b", "o", "n"],
+                    ["b", "u", "t", "e", "r", "f", "l", "y"], ["g", "i", "r", "a", "f", "e"],
+                    ["g", "i", "b", "o", "n"], ["h", "i", "p", "p", "o", "p", "o", "t", "a", "m", "u", "s"],
+                    ["j", "e", "l", "y", "f", "i", "s", "h"], ["k", "a", "n", "g", "a", "r", "o"],
+                    ["k", "i", "l", "e", "r", "w", "h", "a", "l", "e"], ["l", "a", "m", "a"], ["m", "o", "s", "e"],
+                    ["m", "e", "r", "c", "a", "t"], ["o", "t", "e", "r"], ["p", "a", "r", "o", "t"],
+                    ["q", "u", "o", "k", "a"], ["q", "u", "o", "l"], ["r", "a", "c", "o", "n"],
+                    ["r", "e", "i", "n", "d", "e", "r"], ["r", "a", "b", "i", "t"],
+                    ["s", "q", "u", "i", "r", "e", "l"], ["s", "h", "e", "p"], ["w", "a", "l", "a", "b", "y"]]
 
+
+repeated_animals_reverse = [["k", "r", "a", "v", "d", "r", "a"], ["r", "o", "t", "a", "g", "i", "l", "a"],
+                    ["o", "l", "i", "d", "a", "m", "r", "a"], ["n", "o", "b", "a", "b"],
+                    ["y", "l", "f", "r", "e", "t", "u", "b"], ["e", "f", "a", "r", "i", "g"],
+                    ["n", "o", "b", "i", "g"], ["s", "u", "m", "a", "t", "o", "p", "o", "p", "i", "h"],
+                    ["h", "s", "i", "f", "y", "l", "e", "j"], ["o", "r", "a", "g", "n", "a", "k"],
+                    ["e", "l", "a", "h", "w", "r", "e", "l", "i", "k"], ["a", "m", "a", "l"], ["e", "s", "o", "m"],
+                    ["t", "a", "c", "r", "e", "m"], ["r", "e", "t", "o"], ["t", "o", "r", "a", "p"],
+                    ["a", "k", "o", "u", "q"], ["l", "o", "u", "q"], ["n", "o", "c", "a", "r"],
+                    ["r", "e", "d", "n", "i", "e", "r"], ["t", "i", "b", "a", "r"], ["l", "e", "r", "i", "u", "q", "s"],
+                    ["p", "e", "h", "s"], ["y", "b", "a", "l", "a", "w"]]
+
+if scan in repeated_animals or repeated_animals_reverse:
+
+# ----- checking if theres the same animal on the two lists -----
 unknown = False
 
 for animal in animals:
@@ -92,18 +118,23 @@ for animal in animals:
         unknown = True
 
 if unknown:
-    print("??")
+    result = "??"
+    # print("??")
 else:
-    print(scan)
+    result = scan
+    # print(scan)
 
 # ----- checking if theres the same animal on the two lists when the animal comes reverse -----
+if result == "??":
+    reverse = []
 
-bicho = []
-
-for i in range(len(scan) - 1, -1, -1):
-    bicho.append(scan[i])
-
-print(bicho)
+    for i in range(len(scan) - 1, -1, -1):
+        reverse.append(scan[i])
+    print(reverse)
+elif result == scan:  # ----- if not reverse -----
+    print(scan)
+else:
+    print("??")
 
 
 
