@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="004b0448-db83-4475-a31b-6f6f9fb4303a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desafio_individual_road_detective/app/dabdahda.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/desafio_individual_road_detective/app/road_detective.py" beforeDir="false" afterPath="$PROJECT_DIR$/desafio_individual_road_detective/app/road_detective.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +31,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -96,7 +96,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/desafio_individual_road_detective/app/road_detective.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\louyza.duarte\Documents\HBSIS-Padawan\desafio_individual_road_detective\road_detective.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,22 +185,22 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="215" y="87" key="CommitChangelistDialog2/0.0.1280.984@0.0.1280.984" timestamp="1579115088645" />
-    <state width="1259" height="288" key="GridCell.Tab.0.bottom" timestamp="1579289260425">
+    <state width="1259" height="288" key="GridCell.Tab.0.bottom" timestamp="1579293360137">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1259" height="288" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1579289260425" />
-    <state width="1259" height="288" key="GridCell.Tab.0.center" timestamp="1579289260425">
+    <state width="1259" height="288" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1579293360137" />
+    <state width="1259" height="288" key="GridCell.Tab.0.center" timestamp="1579293360137">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1259" height="288" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1579289260425" />
-    <state width="1259" height="288" key="GridCell.Tab.0.left" timestamp="1579289260425">
+    <state width="1259" height="288" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1579293360137" />
+    <state width="1259" height="288" key="GridCell.Tab.0.left" timestamp="1579293360136">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1259" height="288" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1579289260425" />
-    <state width="1259" height="288" key="GridCell.Tab.0.right" timestamp="1579289260425">
+    <state width="1259" height="288" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1579293360136" />
+    <state width="1259" height="288" key="GridCell.Tab.0.right" timestamp="1579293360137">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1259" height="288" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1579289260425" />
+    <state width="1259" height="288" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1579293360137" />
     <state width="1259" height="325" key="GridCell.Tab.1.bottom" timestamp="1579284828611">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
