@@ -73,6 +73,9 @@ animals = [["a", "a", "r", "d", "v", "a", "r", "k"], ["a", "l", "l", "i", "g", "
 # ----- removing unwanted characters -----
 photo = "".join(files.split("=")) + " "
 
+if re.search("[A-Z]\W", photo):
+    result = "??"
+
 # ----- animal character list -----
 scan = []
 
@@ -92,8 +95,7 @@ repeated_animals = [["a", "r", "d", "v", "a", "r", "k"], ["a", "l", "i", "g", "a
                     ["q", "u", "o", "k", "a"], ["q", "u", "o", "l"], ["r", "a", "c", "o", "n"],
                     ["r", "e", "i", "n", "d", "e", "r"], ["r", "a", "b", "i", "t"],
                     ["s", "q", "u", "i", "r", "e", "l"], ["s", "h", "e", "p"], ["w", "a", "l", "a", "b", "y"]]
-
-
+#
 repeated_animals_reverse = [["k", "r", "a", "v", "d", "r", "a"], ["r", "o", "t", "a", "g", "i", "l", "a"],
                     ["o", "l", "i", "d", "a", "m", "r", "a"], ["n", "o", "b", "a", "b"],
                     ["y", "l", "f", "r", "e", "t", "u", "b"], ["e", "f", "a", "r", "i", "g"],
@@ -105,10 +107,59 @@ repeated_animals_reverse = [["k", "r", "a", "v", "d", "r", "a"], ["r", "o", "t",
                     ["r", "e", "d", "n", "i", "e", "r"], ["t", "i", "b", "a", "r"], ["l", "e", "r", "i", "u", "q", "s"],
                     ["p", "e", "h", "s"], ["y", "b", "a", "l", "a", "w"]]
 
-if scan in repeated_animals or repeated_animals_reverse:
+
+
+if scan == repeated_animals[0] or scan in repeated_animals_reverse[0]:
+    scan = ["a", "a", "r", "d", "v", "a", "r", "k"]
+elif scan == repeated_animals[1] or scan in repeated_animals_reverse[1]:
+    scan = ["a", "l", "l", "i", "g", "a", "t", "o", "r"]
+elif scan == repeated_animals[2] or scan in repeated_animals_reverse[2]:
+    scan = ["a", "r", "m", "a", "d", "i", "l", "l", "o"]
+elif scan == repeated_animals[3] or scan in repeated_animals_reverse[3]:
+    scan = ["b", "a", "b", "o", "o", "n"]
+elif scan == repeated_animals[4] or scan in repeated_animals_reverse[4]:
+    scan = ["b", "u", "t", "t", "e", "r", "f", "l", "y"]
+elif scan == repeated_animals[5] or scan in repeated_animals_reverse[5]:
+    scan =  ["g", "i", "r", "a", "f", "f", "e"]
+elif scan == repeated_animals[6] or scan in repeated_animals_reverse[6]:
+    scan = ["g", "i", "b", "b", "o", "n"]
+elif scan == repeated_animals[7] or scan in repeated_animals_reverse[7]:
+    scan = ["h", "i", "p", "p", "o", "p", "o", "t", "a", "m", "u", "s"]
+elif scan == repeated_animals[8] or scan in repeated_animals_reverse[8]:
+    scan = ["j", "e", "l", "l", "y", "f", "i", "s", "h"]
+elif scan == repeated_animals[9] or scan in repeated_animals_reverse[9]:
+    scan = ["k", "a", "n", "g", "a", "r", "o", "o"]
+elif scan == repeated_animals[10] or scan in repeated_animals_reverse[10]:
+    scan = ["k", "i", "l", "l", "e", "r", "w", "h", "a", "l", "e"]
+elif scan == repeated_animals[11] or scan in repeated_animals_reverse[11]:
+    scan = ["l", "l", "a", "m", "a"]
+elif scan == repeated_animals[12] or scan in repeated_animals_reverse[12]:
+    scan = ["m", "o", "o", "s", "e"]
+elif scan == repeated_animals[13] or scan in repeated_animals_reverse[13]:
+    scan = ["m", "e", "e", "r", "c", "a", "t"]
+elif scan == repeated_animals[14] or scan in repeated_animals_reverse[14]:
+    scan = ["o", "t", "t", "e", "r"]
+elif scan == repeated_animals[15] or scan in repeated_animals_reverse[15]:
+    scan = ["p", "a", "r", "r", "o", "t"]
+elif scan == repeated_animals[16] or scan in repeated_animals_reverse[16]:
+    scan = ["q", "u", "o", "k", "k", "a"]
+elif scan == repeated_animals[17] or scan in repeated_animals_reverse[17]:
+    scan = ["q", "u", "o", "l", "l"]
+elif scan == repeated_animals[18] or scan in repeated_animals_reverse[18]:
+    scan = ["r", "a", "c", "o", "o", "n"]
+elif scan == repeated_animals[19] or scan in repeated_animals_reverse[19]:
+    scan = ["r", "e", "i", "n", "d", "e", "e", "r"]
+elif scan == repeated_animals[20] or scan in repeated_animals_reverse[20]:
+    scan = ["r", "a", "b", "b", "i", "t"]
+elif scan == repeated_animals[21] or scan in repeated_animals_reverse[21]:
+    scan = ["s", "q", "u", "i", "r", "r", "e", "l"]
+elif scan == repeated_animals[22] or scan in repeated_animals_reverse[22]:
+    scan = ["s", "h", "e", "e", "p"]
+elif scan == repeated_animals[23] or scan in repeated_animals_reverse[23]:
+    scan = ["w", "a", "l", "l", "a", "b", "y"]
 
 # ----- checking if theres the same animal on the two lists -----
-unknown = False
+unknown = True
 
 for animal in animals:
     if scan == animal:
@@ -119,10 +170,8 @@ for animal in animals:
 
 if unknown:
     result = "??"
-    # print("??")
 else:
     result = scan
-    # print(scan)
 
 # ----- checking if theres the same animal on the two lists when the animal comes reverse -----
 if result == "??":
@@ -130,13 +179,17 @@ if result == "??":
 
     for i in range(len(scan) - 1, -1, -1):
         reverse.append(scan[i])
-    print(reverse)
-elif result == scan:  # ----- if not reverse -----
-    print(scan)
-else:
-    print("??")
+        unknown = True
+        for animal in animals:
+            if reverse == animal:
+                unknown = False
+                break
+            else:
+                unknown = True
 
+        if unknown:
+            result = "??"
+        else:
+            result = reverse
 
-
-
-
+print(''.join(result))
