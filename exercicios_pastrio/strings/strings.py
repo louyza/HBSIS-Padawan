@@ -102,17 +102,34 @@
 
 # 8. Write a Python function that takes a list of words and returns the length of the longest one.
 
-string = "qual será a palavra mais longe nossa eu nem sei"
+# string = "paralelepípedo rodo janela absurdo caixa mesinha"
+#
+# separate = string.split()
+#
+# longest = ""
+#
+# for item in separate:
+#     if len(item) > len(longest):
+#         longest = item
+#
+# print(longest)
 
-separate = string.split()
-order = sort(separate)
-print(order)
 # 9. Write a Python program to remove the nth index character from a nonempty string.
+
+# string = "pandadedidodu"
+# i = 7
 #
+# half1 = string[: i]
+# half2 = string[i + 1:]
 #
-# 10. Write a Python program to change a given string to a new string where the first and last chars have been exchanged.
-#
-#
+# string = half1 + half2
+# print(string)
+
+# 10. Write a Python program to change a given string to a new string where the first and last
+# chars have been exchanged.
+
+
+
 # 11. Write a Python program to remove the characters which have odd index values of a given string.
 #
 #
