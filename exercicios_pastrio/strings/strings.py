@@ -128,11 +128,24 @@
 # 10. Write a Python program to change a given string to a new string where the first and last
 # chars have been exchanged.
 
-
+# string = list("notebook")
+#
+# first = [string[0]]
+# last = [string[-1]]
+# string = string[1:-1]
+#
+# exchanged = "".join(last + string + first)
+# print(exchanged)
 
 # 11. Write a Python program to remove the characters which have odd index values of a given string.
-#
-#
+
+string = list("1234567890")
+
+for i in string:
+    odd = i % 2 == 1
+    
+print(string.remove(odd))
+
 # 12. Write a Python program to count the occurrences of each word in a given sentence.
 #
 #
